@@ -23,16 +23,28 @@ def multiplication_table(n):
     return mult_table
 
 
-    # TODO: replace this with your code
-
 def find_common_items_minimum_index_sum(list1, list2):
     """
     Returns the common item(s) between the two lists which have the lowest index sum
     (the sum of the index of the item in each list.) If there is a tie, return all
     items with the lowest index sum.
     """
+    sum = 0
+    final_list=[]
+    for i in range (len(list1)):
+        temp_sum = 0
+        for j in range(len(list2)):
+            if list1[i] == list2[j]:
+                temp_sum = i+j
+                if sum == 0:
+                    sum = temp_sum
+                    final_list.append(list1[i])
+                elif temp_sum == sum:
+                    final_list.append(list1[i])
 
-    # TODO: replace this with your code
+    return final_list
+
+
 
 def replace_elements(arr):
     """

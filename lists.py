@@ -46,15 +46,12 @@ def find_common_items_minimum_index_sum(list1, list2):
         j=0
         while j<len(list2) and (list1[i] != list2[j]):
             j+=1
-        if temp_sum == 0:
+        if temp_sum == 0 or temp_sum == i+j:
             temp_sum = i+j
             final_list.append(list1[i])
         elif (i+j) < temp_sum :
             temp_sum = i+j
             final_list[0] = list1[i]
-        elif (i+j) == temp_sum :
-            temp_sum = i+j
-            final_list.append(list1[i])
 
 
     return final_list

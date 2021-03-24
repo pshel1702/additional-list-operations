@@ -21,8 +21,8 @@ def test_find_common_items_minimum_index_sum_1():
     assert find_common_items_minimum_index_sum(list1, list2) == ["Shogun"]
 
 def test_find_common_items_minimum_index_sum_1():
-    list1 = [1,3,2]
-    list2 = [3,2,1]
+    list1 = [1,4,3,2]
+    list2 = [3,5,4,1]
     assert find_common_items_minimum_index_sum(list1, list2) == [3]
 
 def test_find_common_items_minimum_index_sum_2():

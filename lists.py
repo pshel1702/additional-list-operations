@@ -10,8 +10,10 @@ def multiplication_table(n):
     where n is the argument passed in
     """
 
-    #create a new list
-    #every element in the list will be multiplied by the current index of the loop
+    #use list comprehension to create the first row of the table
+    #use list comprehension again in a for loop to create 
+    #all the rows in the table
+
     mult_table = []
     orig_table = [1*num for num in range(1,n+1)]
     row = []
@@ -28,7 +30,16 @@ def find_common_items_minimum_index_sum(list1, list2):
     Returns the common item(s) between the two lists which have the lowest index sum
     (the sum of the index of the item in each list.) If there is a tie, return all
     items with the lowest index sum.
+
     """
+
+    #Start with sum = 0
+    #Loop through the lists to find matches
+    #If match is found, add the indices.
+    #Return option with least list index sum 
+    #If multiple matches are found with the same sum, return the list with no 
+    #particular order requirement
+    
     sum = 0
     final_list=[]
     for i in range (len(list1)):

@@ -64,6 +64,18 @@ def replace_elements(arr):
     For example [9,1,3,8] would turn into [9, 8, 8, -1].
     The input array arr will be modified and the function will return None.
     """
+    #If length of input arr is 1, change arr[0] to -1, exit code
+    #Else, for current index, sort the remainder of the list
+    #Find the highest number in the slice, assign it to current index 
+    #Change value at last index to -1 after sorting is done
+
+    if len(arr) == 1:
+         arr[-1] = -1
+    else: 
+        for i in range(len(arr)-1):
+            sorted_input = sorted(arr[i+1:])
+            arr[i] = sorted_input[-1]
+        arr[-1] = -1
 
     
 

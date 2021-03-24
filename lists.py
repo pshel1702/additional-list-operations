@@ -39,19 +39,23 @@ def find_common_items_minimum_index_sum(list1, list2):
     #Return option with least list index sum 
     #If multiple matches are found with the same sum, return the list with no 
     #particular order requirement
-    
-    sum = 0
+
+    temp_sum = 0
     final_list=[]
-    for i in range (len(list1)):
-        temp_sum = 0
-        for j in range(len(list2)):
-            if list1[i] == list2[j]:
-                temp_sum = i+j
-                if sum == 0:
-                    sum = temp_sum
-                    final_list.append(list1[i])
-                elif temp_sum == sum:
-                    final_list.append(list1[i])
+    for i in range(len(list1)):
+        j=0
+        while j<len(list2) and (list1[i] != list2[j]):
+            j+=1
+        if temp_sum == 0:
+            temp_sum = i+j
+            final_list.append(list1[i])
+        elif (i+j) < temp_sum :
+            temp_sum = i+j
+            final_list[0] = list1[i]
+        elif (i+j) == temp_sum :
+            temp_sum = i+j
+            final_list.append(list1[i])
+
 
     return final_list
 
@@ -65,7 +69,7 @@ def replace_elements(arr):
     The input array arr will be modified and the function will return None.
     """
 
-    # TODO: replace this with your code
+    
 
 def add_to_array_form(array_form_of_number, integer_to_add):
     """

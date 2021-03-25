@@ -61,7 +61,7 @@ def replace_elements(arr):
     """
     Replaces each element in arr with the greatest item among the elements to its right,
     and replace the last element with -1 since there are no elements to its right.
-    For example [9,1,3,8] would turn into [9, 8, 8, -1].
+    For example [9,1,3,8] would turn into [8, 8, 8, -1].
     The input array arr will be modified and the function will return None.
     """
     #If length of input arr is 1, change arr[0] to -1, exit code
@@ -85,7 +85,36 @@ def add_to_array_form(array_form_of_number, integer_to_add):
     Takes the array-form of a non-negative integer (`array_form_of_number`) as well as an integer to add to it (`integer_to_add`) and returns the array-form of their sum.
     """
 
-    # TODO: replace this with your code
+    #Convert array to string, to int.
+    #Add the two values
+    #Split result into array
+
+    int_form = str()
+    sum = 0
+    return_arr = []
+
+    for i in range(len(array_form_of_number)):
+        int_form += str(array_form_of_number[i])
+    
+    int_form = int(int_form)
+    sum = int_form + integer_to_add
+
+    #Convert sum back to string to split it up into an array
+
+    sum = str(sum)
+
+    for j in range(len(sum)):
+        return_arr.append(int(sum[j]))
+
+    return return_arr
+
+
+
+    
+    
+    
+    
+        
 
 if __name__ == "__main__":
     from pathlib import Path

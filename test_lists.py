@@ -20,11 +20,6 @@ def test_find_common_items_minimum_index_sum_1():
     list2 = ["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"]
     assert find_common_items_minimum_index_sum(list1, list2) == ["Shogun"]
 
-def test_find_common_items_minimum_index_sum_1():
-    list1 = [1,3,2]
-    list2 = [3,2,1]
-    assert find_common_items_minimum_index_sum(list1, list2) == [3]
-
 def test_find_common_items_minimum_index_sum_2():
     list1 = ["Shogun","Tapioca Express","Burger King","KFC"]
     list2 = ["KFC","Shogun","Burger King"]
@@ -56,6 +51,11 @@ def test_replace_elements_single():
     arr = [400]
     assert replace_elements(arr) == None
     assert arr == [-1]
+
+def test_replace_elements_single():
+    arr = [9,1,3,8]
+    assert replace_elements(arr) == None
+    assert arr == [8, 8, 8, -1]
 
 def test_add_to_array_form_1():
     assert add_to_array_form( [1,2,0,0], 34) == [1,2,3,4]
